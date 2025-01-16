@@ -123,6 +123,7 @@ void server(int fd_client_to_server[CUSTOMERS_NUM][2], int fd_server_to_client[C
     for (int i=0;i<PRODUCTS_NUMBER;i++){
         for(int j=0;j<CUSTOMERS_NUM;j++){
             if (products[i].customers_not_serviced[j]==1){
+                printf("Customer no%d couldn't purchase %s\n",j,products[i].description);
             }
         }
         printf("------\n");
